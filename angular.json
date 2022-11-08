@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/english-dashboard",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,17 +23,20 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/apexcharts/dist/apexcharts.min.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -90,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -97,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9923964f-fb2c-4774-898a-6c6af1b2980a"
   }
 }
